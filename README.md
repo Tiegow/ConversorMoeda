@@ -19,11 +19,11 @@ Atualmente, o app faz uso da API de cotações da <a href="https://docs.awesomea
 ### Compilar e executar
 - #### Faça o download ou clone o repositório
     ```
-    git clone https://github.com/Tiegow/Conversor-de-moeda
+    git clone https://github.com/Tiegow/ConversorMoeda
     ```
     Em seguida, acesse o diretório do projeto:
     ```
-    cd Conversor-de-moeda
+    cd ConversorMoeda
     ```
 - #### Instale as dependências do Flutter
     ```
