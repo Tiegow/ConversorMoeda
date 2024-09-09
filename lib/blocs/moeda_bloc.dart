@@ -1,8 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:projeto_flutter01/app/models/moeda_model.dart';
-import 'package:projeto_flutter01/app/repositories/moeda_repository.dart';
 import 'package:rxdart/rxdart.dart';
+
+import '../models/moeda_model.dart';
+import '../repositories/moeda_repository.dart';
 
 part 'moeda_event.dart';
 part 'moeda_state.dart';

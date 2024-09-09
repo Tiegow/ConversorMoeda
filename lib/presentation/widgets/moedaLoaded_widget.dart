@@ -2,7 +2,8 @@ import 'package:extended_masked_text/extended_masked_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:projeto_flutter01/app/blocs/moeda_bloc.dart';
+
+import '../../blocs/moeda_bloc.dart';
 
 class MoedaloadedWidget extends StatefulWidget {
   const MoedaloadedWidget({super.key});

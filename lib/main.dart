@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:projeto_flutter01/app/blocs/moeda_bloc.dart';
-import 'package:projeto_flutter01/app/presentation/pages/home_page.dart';
-import 'package:projeto_flutter01/app/repositories/moeda_repository.dart';
+
+import 'blocs/moeda_bloc.dart';
+import 'presentation/pages/home_page.dart';
+import 'repositories/moeda_repository.dart';
 
 void main() async {
   runApp(const MyApp());
