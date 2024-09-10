@@ -9,7 +9,7 @@ final class MoedaLoaded extends MoedaState {
   final CurrencyResponse moedaInfo; //Informações da moeda
   final double input1;
   final double input2;
-  final List<String> dropdownStringItems = ["USD", "EUR", "BTC"];
+  static List<String> dropdownStringItems = ["USD", "EUR", "BTC"];
 
   MoedaLoaded(
       {required this.input1,

@@ -1,3 +1,4 @@
+import 'package:Conversor_moedas/presentation/theme/custom_themes/theme_extention.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -12,13 +13,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       body: Container(
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xffffffff), Color(0xfff7ecf8), Color(0xffc4eaed)],
-              stops: [0, 0.5, 1],
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-        )),
+        decoration:BoxDecoration(
+            gradient: Theme.of(context).extension<MyCustomExtention>()?.containerGradient),
         child: Center(
           child: ListView(
               shrinkWrap: true,

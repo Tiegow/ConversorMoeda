@@ -1,3 +1,4 @@
+import 'package:Conversor_moedas/presentation/theme/theme.dart';
 import 'package:extended_masked_text/extended_masked_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -44,8 +45,6 @@ class _MoedaloadedWidgetState extends State<MoedaloadedWidget> {
         child: Container(
           width: 400,
           child: Card(
-            color: const Color(0xFFFFFFFF),
-            elevation: 5,
             child: Padding(
               padding: const EdgeInsets.all(24.0),
               child: Column(
@@ -55,7 +54,7 @@ class _MoedaloadedWidgetState extends State<MoedaloadedWidget> {
                       DropdownButtonHideUnderline(
                         child: DropdownButton<String>(
                           value: state.moedaInfo.rate.code,
-                          items: state.dropdownStringItems.map((String item) {
+                          items: MoedaLoaded.dropdownStringItems.map((String item) {
                             return DropdownMenuItem<String>(
                               value: item,
                               child: Row(
@@ -68,7 +67,7 @@ class _MoedaloadedWidgetState extends State<MoedaloadedWidget> {
                                       fit: BoxFit.cover,
                                   )),
                                   const SizedBox(width: 10),
-                                  Text(item),
+                                  Text(item, style: Theme.of(context).textTheme.bodyMedium,),
                                 ],
                               ),
                             );
@@ -112,9 +111,9 @@ class _MoedaloadedWidgetState extends State<MoedaloadedWidget> {
                         ),
                       ),
                       const SizedBox(width: 10),
-                      const Text(
+                      Text(
                         "BRL",
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: Theme.of(context).textTheme.bodyMedium,
                       ),
                       const SizedBox(width: 10),
                       Expanded(
