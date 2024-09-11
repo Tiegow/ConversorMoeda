@@ -15,14 +15,9 @@ class MyTheme {
     canvasColor: const Color(0xe5c4eaed),
     textTheme: MyTextTheme.lightTextTheme,
     cardTheme: MyCardTheme.lightCardTheme,
-    cardColor: Colors.black54,
     appBarTheme: MyAppBarTheme.lightBarTheme,
     extensions: [MyCustomExtention(
-      containerGradient: const LinearGradient(
-        colors: [Color(0xffffffff), Color(0xfff7ecf8), Color(0xffc4eaed)],
-        stops: [0, 0.5, 1],
-        begin: Alignment.topRight,
-        end: Alignment.bottomLeft,),
+      containerGradient: MyColors.backGroundLightGradient,
     )]
   );
 
@@ -32,14 +27,9 @@ class MyTheme {
     canvasColor: const Color(0xE53D3000),
     textTheme: MyTextTheme.darkTextTheme,
     cardTheme: MyCardTheme.darkCardTheme,
-    cardColor: Colors.black54,
     appBarTheme: MyAppBarTheme.darkBarTheme,
     extensions: [MyCustomExtention(
-      containerGradient: const LinearGradient(
-        colors: [Color(0xFF3D3000), Color(0xFF201D17), Color(0xFF080808)],
-        stops: [0, 0.5, 1],
-        begin: Alignment.topRight,
-        end: Alignment.bottomLeft,),
+      containerGradient: MyColors.backGroundDarkGradient,
     )]
   );
 }

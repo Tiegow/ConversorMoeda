@@ -1,6 +1,7 @@
 import 'package:Conversor_moedas/blocs/theme_cubit.dart';
 import 'package:Conversor_moedas/presentation/theme/custom_themes/theme_extention.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../blocs/moeda_bloc.dart';
@@ -15,6 +16,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          systemStatusBarContrastEnforced: true,
+        ),
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: IconButton(
