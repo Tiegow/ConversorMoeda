@@ -1,3 +1,4 @@
+import 'package:Conversor_moedas/presentation/theme/custom_themes/app_bar_theme.dart';
 import 'package:Conversor_moedas/presentation/theme/custom_themes/card_theme.dart';
 import 'package:Conversor_moedas/presentation/theme/custom_themes/text_theme.dart';
 import 'package:Conversor_moedas/presentation/theme/custom_themes/theme_extention.dart';
@@ -15,6 +16,7 @@ class MyTheme {
     textTheme: MyTextTheme.lightTextTheme,
     cardTheme: MyCardTheme.lightCardTheme,
     cardColor: Colors.black54,
+    appBarTheme: MyAppBarTheme.lightBarTheme,
     extensions: [MyCustomExtention(
       containerGradient: const LinearGradient(
         colors: [Color(0xffffffff), Color(0xfff7ecf8), Color(0xffc4eaed)],
@@ -31,12 +33,13 @@ class MyTheme {
     textTheme: MyTextTheme.darkTextTheme,
     cardTheme: MyCardTheme.darkCardTheme,
     cardColor: Colors.black54,
-      extensions: [MyCustomExtention(
-        containerGradient: const LinearGradient(
-          colors: [Color(0xFF3D3000), Color(0xFF201D17), Color(0xFF080808)],
-          stops: [0, 0.5, 1],
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,),
-      )]
+    appBarTheme: MyAppBarTheme.darkBarTheme,
+    extensions: [MyCustomExtention(
+      containerGradient: const LinearGradient(
+        colors: [Color(0xFF3D3000), Color(0xFF201D17), Color(0xFF080808)],
+        stops: [0, 0.5, 1],
+        begin: Alignment.topRight,
+        end: Alignment.bottomLeft,),
+    )]
   );
 }

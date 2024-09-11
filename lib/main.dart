@@ -1,3 +1,4 @@
+import 'package:Conversor_moedas/blocs/theme_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -15,14 +16,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => MoedaBloc(repo: MoedaRepository())..add(FetchMoeda(tipoConversao: "USD")),
-      child: MaterialApp(
-        themeMode: ThemeMode.system,
-        theme: MyTheme.lightTheme,
-        darkTheme: MyTheme.darkTheme,
-        debugShowCheckedModeBanner: false,
-        home: HomePage(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => MoedaBloc(repo: MoedaRepository())
+            ..add(FetchMoeda(tipoConversao: "USD")),
+        ),
+        BlocProvider(
+          create: (_) => ThemeCubit(),
+        ),
+      ],
+      child: BlocBuilder<ThemeCubit, ThemeState>(
+        builder: (context, state) {
+          return MaterialApp(
+            themeMode: state.mode,
+            theme: MyTheme.lightTheme,
+            darkTheme: MyTheme.darkTheme,
+            debugShowCheckedModeBanner: false,
+            home: HomePage(),
+          );
+        },
       ),
     );
   }
